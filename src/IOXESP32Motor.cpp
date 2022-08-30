@@ -45,11 +45,11 @@ void IOXESP32Motor::begin() {
 
 void IOXESP32Motor::forward(int speed) {
     ledcWrite(motor_ch_to_ch[this->ch].a, (100 - speed) / 100.0f * MAX_PWM_DUTY);
-    ledcWrite(motor_ch_to_ch[this->ch].b, 0);
+    ledcWrite(motor_ch_to_ch[this->ch].b, MAX_PWM_DUTY);
 }
 
 void IOXESP32Motor::backward(int speed) {
-    ledcWrite(motor_ch_to_ch[this->ch].a, 0);
+    ledcWrite(motor_ch_to_ch[this->ch].a, MAX_PWM_DUTY);
     ledcWrite(motor_ch_to_ch[this->ch].b, (100 - speed) / 100.0f * MAX_PWM_DUTY);
 }
 
