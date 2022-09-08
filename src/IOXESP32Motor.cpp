@@ -1,8 +1,8 @@
 #include "IOXESP32Motor.h"
 #include "Arduino.h"
 
-#define MOTOR1_A_PIN 27
-#define MOTOR1_B_PIN 26
+#define MOTOR1_A_PIN 26
+#define MOTOR1_B_PIN 27
 #define MOTOR2_A_PIN 14
 #define MOTOR2_B_PIN 12
 
